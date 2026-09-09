@@ -5,7 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#c5a06a">
   <title>Жазгүл & Зухриддин — Үйлөнүү тою</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+:root{
+  --ivory:#fbf7ef;
+  --cream:#f3eadb;
+  --paper:#fffdf8;
+  --gold:#b18a55;
+  --gold2:#c9a875;
+  --brown:#4d4034;
+  --muted:#8b7967;
+  --line:#dfceb2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--brown);font-family:Montserrat,Arial,sans-serif;font-weight:300;line-height:1.75}
+body:before,body:after{content:"";position:fixed;width:180px;height:180px;border:1px solid rgba(177,138,85,.15);border-radius:50%;pointer-events:none;z-index:0}
+body:before{left:-110px;top:20%;box-shadow:90px 30px 0 -70px var(--gold2)}
+body:after{right:-110px;bottom:10%}
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 50% 20%,rgba(255,255,255,.95),rgba(244,233,215,.96) 50%,rgba(225,207,177,.96));}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 45%,rgba(177,138,85,.08) 45.2%,transparent 46%),linear-gradient(45deg,transparent 52%,rgba(177,138,85,.07) 52.2%,transparent 53%);opacity:.8}
+.hero-inner{text-align:center;padding:50px 24px;max-width:760px;position:relative;z-index:1}
+.eyebrow{letter-spacing:.24em;font-size:11px;color:var(--gold);font-weight:500;margin:0 0 16px}
+.ornament{color:var(--gold);font-size:24px;margin:8px}
+h1,h2,.signature{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+h1{font-size:clamp(58px,13vw,108px);line-height:.9;margin:15px 0 28px}
+h1 span{font-style:italic;color:var(--gold);font-size:.75em}
+h2{font-size:clamp(40px,8vw,64px);line-height:1.05;margin:8px 0 25px}
+.date{letter-spacing:.32em;color:var(--gold);font-size:14px;margin-bottom:35px}
+.gold-btn,.outline-btn{border-radius:999px;padding:13px 28px;font:500 12px Montserrat,sans-serif;letter-spacing:.08em;cursor:pointer;transition:.25s;border:1px solid var(--gold)}
+.gold-btn{background:var(--gold);color:white;box-shadow:0 10px 25px rgba(120,85,40,.15)}
+.gold-btn:hover{transform:translateY(-2px);background:#9e7746}
+.outline-btn{background:transparent;color:var(--gold)}
+.outline-btn:hover{background:var(--cream)}
+.scroll-hint{margin-top:60px;color:var(--gold);font-size:24px;animation:bob 1.8s infinite}
+.music-toggle{position:absolute;right:24px;top:22px;border:0;background:none;color:var(--gold);font-size:24px;z-index:2;cursor:pointer}
+section{position:relative;z-index:1;padding:95px 22px;text-align:center;max-width:900px;margin:auto}
+.invitation{background:var(--paper);max-width:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.invitation>*, .story>*, .program>*, .venue>*, .rsvp>*, .music>*{max-width:680px;margin-left:auto;margin-right:auto}
+.invitation h2{font-style:italic}
+.invitation p{max-width:610px}
+.lead{font-size:18px}
+.signature{font-size:34px;font-style:italic;color:var(--gold);margin-top:35px}
+.divider{color:var(--gold);letter-spacing:.6em;margin:20px 0}
+.countdown-section{background:linear-gradient(180deg,var(--cream),var(--ivory))}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:680px;margin:40px auto 20px}
+.timer div{background:rgba(255,253,248,.75);border:1px solid var(--line);border-radius:12px;padding:18px 8px}
+.timer strong{display:block;font:500 clamp(28px,6vw,44px) "Cormorant Garamond",serif;color:var(--gold)}
+.timer span{font-size:10px;letter-spacing:.1em;color:var(--muted)}
+.small-note{font-size:11px;color:var(--muted);margin-top:25px}
+.story{background:var(--paper)}
+.story-card{margin-top:38px;padding:28px;border:1px solid var(--line);background:rgba(243,234,219,.45);font-family:"Cormorant Garamond",serif;font-size:24px;font-style:italic}
+.story-symbol{font-size:30px;color:var(--gold)}
+.program{text-align:left}
+.program>h2,.program>.eyebrow{text-align:center}
+.timeline{max-width:650px;margin:40px auto 0;border-left:1px solid var(--line);padding-left:28px}
+.event{display:grid;grid-template-columns:75px 1fr;gap:20px;margin:0 0 30px;position:relative}
+.event:before{content:"";position:absolute;left:-35px;top:8px;width:11px;height:11px;border:1px solid var(--gold);background:var(--ivory);border-radius:50%}
+.time{font-family:"Cormorant Garamond",serif;font-size:25px;color:var(--gold)}
+.event b{display:block;font-size:13px;font-weight:500}
+.event small{display:block;color:var(--muted);font-size:11px}
+.venue{background:var(--paper)}
+.venue-box{padding:45px 20px;border:1px solid var(--line);background:linear-gradient(145deg,#fffdf8,#f2e8d8)}
+.pin{font-size:36px;color:var(--gold)}
+.link-btn{display:inline-block;text-decoration:none;margin-top:18px}
+.rsvp{background:var(--cream)}
+.rsvp-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.rsvp-message{min-height:28px;color:var(--gold);font-size:13px}
+.music{background:var(--paper)}
+.music .gold-btn{margin-top:15px}
+.final{max-width:none;min-height:70vh;display:grid;place-items:center;background:linear-gradient(rgba(78,61,43,.48),rgba(78,61,43,.55)),radial-gradient(circle at 50% 35%,#d9bd8c,#77644e 75%);color:white}
+.final .eyebrow,.final .ornament,.final .divider{color:white}
+.final h2{max-width:700px}
+.final-inner{padding:30px}
+footer{text-align:center;padding:25px;background:#eadcc7;color:#806c56;font-size:10px;letter-spacing:.12em}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes bob{50%{transform:translateY(8px)}}
+@media(max-width:560px){
+  section{padding:75px 18px}
+  .timer{gap:7px}
+  .timer div{padding:14px 4px}
+  .lead{font-size:16px}
+  .event{grid-template-columns:62px 1fr;gap:12px}
+}
+
+</style>
 </head>
 <body>
   <div class="petals" aria-hidden="true"></div>
@@ -17,7 +104,7 @@
       <div class="ornament">✦</div>
       <h1>Жазгүл <span>&</span> Зухриддин</h1>
       <p class="date">27 · 07 · 2027</p>
-      <button class="gold-btn" id="openBtn">Чакырууны ачуу</button>
+      <button class="gold-btn" id="openBtn">Чакырууну ачуу</button>
       <div class="scroll-hint">↓</div>
     </div>
   </header>
@@ -125,6 +212,66 @@
   </main>
 
   <footer>Жазгүл & Зухриддин · 27.07.2027</footer>
-  <script src="script.js"></script>
+  <script>
+const weddingDate = new Date("2027-07-27T17:00:00+06:00").getTime();
+
+function updateCountdown(){
+  const now = Date.now();
+  let diff = weddingDate - now;
+  if(diff < 0) diff = 0;
+
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff / 3600000) % 24);
+  const m = Math.floor((diff / 60000) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("days").textContent = String(d).padStart(3,"0");
+  document.getElementById("hours").textContent = String(h).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(m).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(s).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+document.getElementById("openBtn").addEventListener("click",()=>{
+  document.getElementById("invitation").scrollIntoView({behavior:"smooth"});
+});
+
+const audio = document.getElementById("weddingAudio");
+const musicButton = document.getElementById("musicButton");
+const musicToggle = document.getElementById("musicToggle");
+
+function toggleMusic(){
+  if(audio.paused){
+    audio.play().then(()=>{
+      musicButton.textContent="♫ Музыканы токтотуу";
+      musicToggle.textContent="Ⅱ";
+    }).catch(()=>{
+      musicButton.textContent="♫ Өз музыкаңызды кошуңуз";
+    });
+  }else{
+    audio.pause();
+    musicButton.textContent="♫ Музыканы күйгүзүү";
+    musicToggle.textContent="♫";
+  }
+}
+musicButton.addEventListener("click",toggleMusic);
+musicToggle.addEventListener("click",toggleMusic);
+
+document.getElementById("yesBtn").addEventListener("click",()=>{
+  document.getElementById("rsvpMessage").textContent="Рахмат, Айгүл жеңе! Сизди чоң кубаныч менен күтөбүз ❤️";
+});
+document.getElementById("noBtn").addEventListener("click",()=>{
+  document.getElementById("rsvpMessage").textContent="Жооп бергениңиз үчүн рахмат 🤍";
+});
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add("visible");
+  });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+</script>
 </body>
 </html>
