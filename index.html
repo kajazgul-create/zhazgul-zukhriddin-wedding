@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c5a06a">
+  <title>Жазгүл & Зухриддин — Үйлөнүү тою</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+
+  <header class="hero">
+    <button class="music-toggle" id="musicToggle" aria-label="Музыканы күйгүзүү">♫</button>
+    <div class="hero-inner">
+      <p class="eyebrow">ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРЫУ</p>
+      <div class="ornament">✦</div>
+      <h1>Жазгүл <span>&</span> Зухриддин</h1>
+      <p class="date">27 · 07 · 2027</p>
+      <button class="gold-btn" id="openBtn">Чакырууны ачуу</button>
+      <div class="scroll-hint">↓</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="invitation reveal" id="invitation">
+      <p class="eyebrow">УРМАТТУУ</p>
+      <h2>Айгүл жеңе!</h2>
+      <div class="divider">❧</div>
+      <p class="lead">
+        Сизди биздин жашообуздагы эң маанилүү жана бактылуу
+        күндөрдүн бирине — үйлөнүү тоюбузга чын жүрөктөн чакырабыз.
+      </p>
+      <p>
+        Бул өзгөчө күнү биздин кубанычыбызды тең бөлүшүп,
+        ак тилегиңизди айтып, төрүбүздөн орун алыңыз.
+      </p>
+      <p class="signature">Жазгүл & Зухриддин</p>
+      <button class="outline-btn" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">Мен келем ♡</button>
+    </section>
+
+    <section class="countdown-section reveal" id="countdown">
+      <p class="eyebrow">БИЗДИН КҮНГӨ ЧЕЙИН</p>
+      <h2>Кубанычтуу күнгө<br>чогуу санайлы</h2>
+      <div class="timer">
+        <div><strong id="days">000</strong><span>күн</span></div>
+        <div><strong id="hours">00</strong><span>саат</span></div>
+        <div><strong id="minutes">00</strong><span>мүнөт</span></div>
+        <div><strong id="seconds">00</strong><span>секунд</span></div>
+      </div>
+      <p class="small-note">27-июль, 2027-жыл</p>
+    </section>
+
+    <section class="story reveal">
+      <p class="eyebrow">БИЗДИН КҮН</p>
+      <h2>Жаңы барактын башталышы</h2>
+      <p>
+        Эки жүрөк, бир кыял, бир үй-бүлө. Биз үчүн бул күн —
+        сүйүүбүздү жакындарыбыз менен бөлүшө турган өзгөчө майрам.
+        Сиздин катышууңуз бул күндү дагы да баалуу кылат.
+      </p>
+      <div class="story-card">
+        <div class="story-symbol">♡</div>
+        <p>«Бакыт — аны бөлүшө турган адамдардын жанында болуу»</p>
+      </div>
+    </section>
+
+    <section class="program reveal">
+      <p class="eyebrow">ТОЙДУН ПРОГРАММАСЫ</p>
+      <h2>Күнүбүздүн ирмемдери</h2>
+      <div class="timeline">
+        <div class="event"><span class="time">15:00</span><div><b>Конокторду тосуп алуу</b><small>Жылуу жолугушуу жана сүрөткө түшүү</small></div></div>
+        <div class="event"><span class="time">16:00</span><div><b>Салтанаттуу бөлүк</b><small>Эсте каларлык көз ирмемдер</small></div></div>
+        <div class="event"><span class="time">17:00</span><div><b>Той</b><small>Майрамдык дасторкон жана куттуктоолор</small></div></div>
+        <div class="event"><span class="time">19:00</span><div><b>Майрамдык программа</b><small>Ыр, бий жана көңүл ачуу</small></div></div>
+      </div>
+    </section>
+
+    <section class="venue reveal">
+      <p class="eyebrow">ТОЙ ӨТҮҮЧҮ ЖАЙ</p>
+      <h2>«Рахат» тойканасы</h2>
+      <div class="venue-box">
+        <div class="pin">⌖</div>
+        <p>Бишкек шаары</p>
+        <p><strong>Щербакова көчөсү, 12</strong></p>
+        <a class="gold-btn link-btn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Щербакова+12,+Бишкек">
+          Маршрутту көрүү
+        </a>
+      </div>
+    </section>
+
+    <section class="rsvp reveal">
+      <p class="eyebrow">RSVP</p>
+      <h2>Айгүл жеңе, сизди күтөбүз!</h2>
+      <p>Тойго катыша турганыңызды билдирип коюңуз.</p>
+      <div class="rsvp-buttons">
+        <button class="gold-btn" id="yesBtn">♡ Келем</button>
+        <button class="outline-btn" id="noBtn">Келе албайм</button>
+      </div>
+      <p id="rsvpMessage" class="rsvp-message"></p>
+    </section>
+
+    <section class="music reveal">
+      <p class="eyebrow">АТМОСФЕРА</p>
+      <h2>Музыка менен бирге</h2>
+      <p>Тойдун маанайын музыка коштосун.</p>
+      <button class="gold-btn" id="musicButton">♫ Музыканы күйгүзүү</button>
+      <audio id="weddingAudio" loop preload="none">
+        <!-- Өз музыкаңызды music/wedding.mp3 катары кошсоңуз болот -->
+        <source src="music/wedding.mp3" type="audio/mpeg">
+      </audio>
+      <p class="small-note">Эскертүү: браузерлер музыканы биринчи басуудан кийин гана ойнотушу мүмкүн.</p>
+    </section>
+
+    <section class="final reveal">
+      <div class="final-inner">
+        <div class="ornament">✦</div>
+        <h2>Сиздерди чыдамсыздык менен күтөбүз!</h2>
+        <p>Жазгүл & Зухриддин</p>
+        <div class="divider">♡</div>
+        <p>27.07.2027</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Жазгүл & Зухриддин · 27.07.2027</footer>
+  <script src="script.js"></script>
+</body>
+</html>
